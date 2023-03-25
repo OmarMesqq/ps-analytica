@@ -1,0 +1,7 @@
+jupyter
+notebook
+pandas 
+openpyxl
+matplotlib 
+numpy
+basedosdados
