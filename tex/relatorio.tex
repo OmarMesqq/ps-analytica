@@ -8,8 +8,53 @@
 	\date{} 
 	\maketitle
 
+	\section{Motivação}
+
+	Buscou-se estabelecer e/ou achar uma conexão entre o perfil do eleitorado médio carioca e suas tendências 
+	de voto para Presidência da República. Para tanto, foi escolhido como base do estudo a última eleição 
+	(\textbf{Outubro de 2022}).
+
+	\section{Metodologia} 
+
+	Foi feita uma pesquisa em \textit{sites} que pudessem fornecer informações de forma confiável a respeito da
+	dados de eleitorado. Os selectionados foram: 
+
+	\begin{enumerate} 
+		\item{\texttt{IBGE}: para obtenção do código do município}
+		\item{\texttt{TSE}: para obtenção das zonas eleitorais e estatísticas do eleitorado} 
+		\item{\texttt{Base dos Dados}: a qual, por meio de uma API, permitiu que fossem obtidos
+			dados de votos e do perfil da pessoa eleitora}
+
+	\end{enumerate}
+
+	Ademais, foi utilizada a linguagem de programação \textbf{Python 3.10} e seu módulo interno \texttt{os}. 
+	Foram utilizados também dois módulos externos (baixados pelo \texttt{pip}): \texttt{basedosdados}, para
+	acesso à API no \textit{Google BigQuery} e o \texttt{pandas} para tratamento e análise de tabelas.
 
 
+	No estudo, foram criados 4 (quatro) laços \texttt{for} para que iterassem as zonas eleitorais com maior 
+	quantidade de pessoas votantes a fim de maximizar o espaço amostral do estudo. Ao final desses laços,
+	criou-se variáveis para visualização do \textbf{indíce de escolaridade} e da 
+	\textbf{proporção entre pessoas do genêro masculino e feminino} nas zonas de interesse.
+
+	\newpage
+
+	\section{Conclusão} 
+
+	Ao final do caderno Jupyter, as saídas dos laços foram salvas e uma pequena análise individual e comparativa
+	foi feita. Três (3) conclusões foram tiradas: 
+
+	\begin{enumerate} 
+		\item{Zonas com maior índice de baixa escolaridade tendem a votar menos à esquerda}
+		\item{Uma maior quantidade de eleitoras mulheres não parece gerar uma preferência 
+			por partidos de esquerda em uma dada zona}
+		\item{O centro, representado no estudo por apenas um partido, mantém uma presença não 
+			desprezível nas zonas eleitorais cariocas}
+
+	\end{enumerate} 
+
+	As (possíveis) explicações para essas tendências estão explicadas no estudo em seu formato de caderno 
+	interativo.
 
 
 \end{document}
